@@ -1,8 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import { Pagelayout } from "../container";
 
-export default function Home() {
-    return <Pagelayout title="Welcome">
-      
-    </Pagelayout>;
-}
+const Home = () => {
+    return <Pagelayout title="Welcome"></Pagelayout>;
+};
+
+export default Home;
