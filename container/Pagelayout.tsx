@@ -6,7 +6,7 @@ const Pagelayout = ({ title, children }: PagecontainerProps): JSX.Element => {
     return (
         <div>
             <Head>
-                <title>Jenjenluxury hair & beauty | {title}</title>
+                <title>Jenjen's Luxury hair & beauty | {title}</title>
             </Head>
             {children}
         </div>

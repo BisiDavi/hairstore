@@ -21,7 +21,7 @@ const AlertBanner = () => {
                         background-color: #ca3862;
                         text-align: center;
                         width: 100%;
-                        font-family: "Shippori Mincho B1", serif;
+                        font-family: "raleway";
                     }
                 `}
             </style>
