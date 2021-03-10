@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import uuidv4 from "uuid";
 
-const Menu = () => {
+const Nav = () => {
     const menuLink = [
         { name: "Home", link: "/" },
         { name: "SHOP", link: "/shop" },
@@ -19,4 +19,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default Nav;

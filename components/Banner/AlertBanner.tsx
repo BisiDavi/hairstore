@@ -1,6 +1,6 @@
 import React from "react";
 
-const Banner = () => {
+const AlertBanner = () => {
     return (
         <div>
             <h3>
@@ -16,8 +16,12 @@ const Banner = () => {
                 {`
                     h3 {
                         color: white;
-                        font-size: 1.2em;
+                        font-size: 1em;
                         text-transform: capitalize;
+                        background-color: #ca3862;
+                        text-align: center;
+                        width: 100%;
+                        font-family: "Shippori Mincho B1", serif;
                     }
                 `}
             </style>
@@ -25,4 +29,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default AlertBanner;

@@ -1,9 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import { NextPage } from "next";
 import { PagecontainerProps } from "../types";
 
-const Pagelayout: NextPage = ({ title, children }: PagecontainerProps) => {
+const Pagelayout = ({ title, children }: PagecontainerProps): JSX.Element => {
     return (
         <div>
             <Head>
