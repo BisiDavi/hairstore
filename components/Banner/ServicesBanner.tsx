@@ -1,11 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import { v4 as uuidv4 } from "uuid";
 
 const ServicesBanner = () => {
     const bannerImg = ["shopHairwigs", "minkLashes", "FAQ", "Accessories"];
     const displayServices = () =>
         bannerImg.map((img) => (
-            <Image src={`/${img}.webp`} height={200} width={400} />
+            <Image
+                key={uuidv4()}
+                src={`/${img}.webp`}
+                height={200}
+                width={400}
+            />
         ));
     return (
         <div className="our-services">

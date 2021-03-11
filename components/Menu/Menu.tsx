@@ -115,6 +115,8 @@ const Nav = () => {
                         .hamburger {
                             height: 50px;
                             width: 50px;
+                            position: absolute;
+                            right: 10px;
                         }
                         nav.nav-menu {
                             padding: 0px 22px;
