@@ -10,7 +10,7 @@ const Button = ({ text, linkTo, bgColor, width, height }: ButtonProps) => {
             </Link>
             <style jsx>
                 {`
-                    background-color: ${bgColor};
+                    background: ${bgColor};
                     height: ${height};
                     width: ${width};
                     color: white;

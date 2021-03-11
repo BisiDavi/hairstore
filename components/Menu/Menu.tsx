@@ -40,6 +40,25 @@ const Nav = () => {
                     </li>
                 </Link>
             ))}
+            <style jsx>
+                {`
+                    ul.menu li.menu-link ul {
+                        display: none;
+                    }
+
+                    ul.menu li.menu-link {
+                        height: 25px;
+                        color: #ce897b;
+                    }
+
+                    ul.menu {
+                        display: flex;
+                        width: 70%;
+                        align-items: center;
+                        justify-content: space-around;
+                    }
+                `}
+            </style>
         </ul>
     );
 
@@ -48,6 +67,17 @@ const Nav = () => {
             <Image src="/logo.jpg" height={150} width={150} />
             {showMenu(menuLink)}
             <CartIcon count={0} />
+
+            <style jsx>
+                {`
+                    nav.nav-menu {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                    }
+                `}
+            </style>
         </nav>
     );
 };
