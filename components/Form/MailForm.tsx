@@ -4,26 +4,33 @@ import Image from "next/image";
 const MailForm = () => {
     return (
         <div className="mailform">
-            <div className="mail">
-                <p>
-                    Be the first to know about our sales, new arrivals & more!
-                </p>
-                <Image
-                    className="mailText"
-                    src="/mailListText.webp"
-                    width="600px"
-                    height="60px"
-                />
+            <div className="overlay">
+                <div className="mail">
+                    <p>
+                        Be the first to know about our sales, new arrivals &
+                        more!
+                    </p>
+                    <Image
+                        className="mailText"
+                        src="/mailListText.webp"
+                        width="600px"
+                        height="60px"
+                    />
+                </div>
+                <form>
+                    <input placeholder="Enter your email here*" />
+                    <button>Join</button>
+                </form>
             </div>
-            <form>
-                <input placeholder="Enter your email here*" />
-                <button>Join</button>
-            </form>
             <style jsx>
                 {`
                     .mail {
-                        width: max-content;
+                        align-items: center;
+                        justify-content: center;
+                        width: 70%;
                         margin: 50px auto 0px auto;
+                        display: flex;
+                        flex-direction: column;
                     }
                     .mail p {
                         color: white;
@@ -43,7 +50,8 @@ const MailForm = () => {
                         background: transparent;
                         border: 2px solid white;
                         height: 50px;
-                        width: 500px;
+                        width: 100%;
+                        padding: 0px 50px;
                         height: 70px;
                         text-align: center;
                     }
@@ -73,6 +81,25 @@ const MailForm = () => {
                         font-weight: bold;
                         font-size: 1.5em;
                         font-family: "raleway";
+                    }
+                    @media (max-width: 768px) {
+                        input {
+                            padding: unset;
+                            width: 70%;
+                            height: 50px;
+                        }
+                        button {
+                            height: 50px;
+                            font-size: 1em;
+                        }
+                        input::placeholder {
+                            font-size: 1em;
+                        }
+                        .overlay {
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.6);
+                        }
                     }
                 `}
             </style>

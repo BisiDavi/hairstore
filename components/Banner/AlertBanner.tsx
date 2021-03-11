@@ -23,6 +23,11 @@ const AlertBanner = () => {
                         width: 100%;
                         font-family: "raleway";
                     }
+                    @media (max-width: 768px) {
+                        h3 {
+                            font-size: 0.8em;
+                        }
+                    }
                 `}
             </style>
         </div>

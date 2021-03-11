@@ -12,6 +12,7 @@ const HomeBanner = () => {
                         src="/shopArrivalText.webp"
                         height={60}
                         width={1000}
+                        layout="responsive"
                     />
                 </div>
                 <span className="button">
@@ -27,7 +28,7 @@ const HomeBanner = () => {
             <style jsx>
                 {`
                     .overlay {
-                        background: rgba(0, 0, 0, 0.1);
+                        background: rgba(0, 0, 0, 0.6);
                         width: 100%;
                         height: 500px;
                         justify-content: center;
@@ -54,7 +55,7 @@ const HomeBanner = () => {
                     }
                     .welcometext {
                         margin: 20px auto;
-                        width: 1000px;
+                        width: 60%;
                     }
                     .button {
                         background-color: #b44262;
@@ -67,6 +68,17 @@ const HomeBanner = () => {
                         font-family: "raleway";
                         border: none;
                         margin: auto;
+                    }
+                    @media (max-width: 768px) {
+                        h3 {
+                            font-size: 1.5em;
+                        }
+                        .welcometext {
+                            width: 80%;
+                        }
+                        span.button {
+                            margin: 80px auto 0px auto;
+                        }
                     }
                 `}
             </style>

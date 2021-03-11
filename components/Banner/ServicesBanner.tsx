@@ -24,6 +24,15 @@ const ServicesBanner = () => {
                         grid-template-rows: 1fr 1fr;
                         grid-gap: 30px;
                     }
+                    @media (max-width: 768px) {
+                        .our-services {
+                            margin: 10px auto;
+                        }
+                        .serviceBanners {
+                            grid-template-columns: 1fr;
+                            grid-gap: 15px;
+                        }
+                    }
                 `}
             </style>
         </div>

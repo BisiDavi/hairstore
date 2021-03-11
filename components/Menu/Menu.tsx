@@ -57,6 +57,11 @@ const Nav = () => {
                         align-items: center;
                         justify-content: space-around;
                     }
+                    @media (max-width: 768px) {
+                        ul.menu {
+                            display: none;
+                        }
+                    }
                 `}
             </style>
         </ul>
@@ -64,17 +69,58 @@ const Nav = () => {
 
     return (
         <nav className="nav-menu">
-            <Image src="/logo.jpg" height={150} width={150} />
+            <span className="image">
+                <Image
+                    src="/logo.jpg"
+                    height={150}
+                    width={150}
+                    layout="responsive"
+                />
+            </span>
             {showMenu(menuLink)}
-            <CartIcon count={0} />
-
+            <span className="cart">
+                <CartIcon count={0} />
+            </span>
+            <span className="hamburger">
+                <div className="hamburger-line"></div>
+                <div className="hamburger-line"></div>
+                <div className="hamburger-line"></div>
+            </span>
             <style jsx>
                 {`
+                    .image {
+                        height: 5%;
+                        width: 20%;
+                        margin: auto;
+                    }
                     nav.nav-menu {
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
                         width: 100%;
+                    }
+                    @media (max-width: 768px) {
+                        .cart {
+                            position: absolute;
+                            left: 20px;
+                            height: 30px;
+                        }
+                        .hamburger {
+                            height: 40px;
+                            width: 30px;
+                        }
+                        nav.nav-menu {
+                            padding: 0px 22px;
+                        }
+                        .hamburger .hamburger-line {
+                            border: 1px solid deeppink;
+                            margin: 10px 0px;
+                        }
+                    }
+                    @media (min-width: 800px) {
+                        .hamburger {
+                            display: none;
+                        }
                     }
                 `}
             </style>
