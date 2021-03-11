@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import { CartIcon } from "../.";
 
@@ -44,6 +45,7 @@ const Nav = () => {
 
     return (
         <nav className="nav-menu">
+            <Image src="/logo.jpg" height={150} width={150} />
             {showMenu(menuLink)}
             <CartIcon count={0} />
         </nav>

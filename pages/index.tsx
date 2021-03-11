@@ -1,7 +1,12 @@
 import React from "react";
-import Head from "next/head";
 import { Pagelayout } from "../container";
-import { Nav, AlertBanner } from "../components";
+import {
+    Nav,
+    ServicesBanner,
+    AlertBanner,
+    HomeBanner,
+    SelfiesBanner,
+} from "../components";
 
 const Home = () => {
     return (
@@ -9,6 +14,9 @@ const Home = () => {
             <div className="homepage">
                 <AlertBanner />
                 <Nav />
+                <HomeBanner />
+                <ServicesBanner />
+                <SelfiesBanner />
             </div>
         </Pagelayout>
     );
