@@ -10,3 +10,8 @@ export interface ButtonProps {
     width: string;
     height: string;
 }
+
+export interface HamburgerProps {
+    className: string;
+    btnClick: () => void;
+}

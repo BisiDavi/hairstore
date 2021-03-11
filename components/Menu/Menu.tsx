@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import { CartIcon } from "../.";
+import { Hamburger } from "../Button";
 
 const Nav = () => {
+    const [btnState, setBtnstate] = useState(false);
     const menuLink = [
         { name: "HOME", link: "/" },
         {
@@ -19,27 +21,29 @@ const Nav = () => {
         { name: "CONTACT", link: "/contact" },
     ];
     const showMenu = (menus) => (
-        <ul className="menu">
-            {menus.map((menu) => (
-                <Link key={uuidv4()} href={menu.link} passHref>
-                    <li className="menu-link">
-                        {menu.name}
-                        {menu.sublink && (
-                            <ul className="dropdown">
-                                {menu.sublink.map((subMenu) => (
-                                    <Link
-                                        key={uuidv4()}
-                                        href={subMenu.link}
-                                        passHref
-                                    >
-                                        <li>{subMenu.name}</li>
-                                    </Link>
-                                ))}
-                            </ul>
-                        )}
-                    </li>
-                </Link>
-            ))}
+        <>
+            <ul className="menu">
+                {menus.map((menu) => (
+                    <Link key={uuidv4()} href={menu.link} passHref>
+                        <li className="menu-link">
+                            {menu.name}
+                            {menu.sublink && (
+                                <ul className="dropdown">
+                                    {menu.sublink.map((subMenu) => (
+                                        <Link
+                                            key={uuidv4()}
+                                            href={subMenu.link}
+                                            passHref
+                                        >
+                                            <li>{subMenu.name}</li>
+                                        </Link>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    </Link>
+                ))}
+            </ul>
             <style jsx>
                 {`
                     ul.menu li.menu-link ul {
@@ -64,8 +68,10 @@ const Nav = () => {
                     }
                 `}
             </style>
-        </ul>
+        </>
     );
+    const btnClassName = btnState ? "menu opened" : "menu";
+    const hamburgerHandler = () => setBtnstate(!btnState);
 
     return (
         <nav className="nav-menu">
@@ -82,15 +88,16 @@ const Nav = () => {
                 <CartIcon count={0} />
             </span>
             <span className="hamburger">
-                <div className="hamburger-line"></div>
-                <div className="hamburger-line"></div>
-                <div className="hamburger-line"></div>
+                <Hamburger
+                    btnClick={hamburgerHandler}
+                    className={btnClassName}
+                />
             </span>
             <style jsx>
                 {`
                     .image {
                         height: 5%;
-                        width: 20%;
+                        width: 30%;
                         margin: auto;
                     }
                     nav.nav-menu {
@@ -106,15 +113,11 @@ const Nav = () => {
                             height: 30px;
                         }
                         .hamburger {
-                            height: 40px;
-                            width: 30px;
+                            height: 50px;
+                            width: 50px;
                         }
                         nav.nav-menu {
                             padding: 0px 22px;
-                        }
-                        .hamburger .hamburger-line {
-                            border: 1px solid deeppink;
-                            margin: 10px 0px;
                         }
                     }
                     @media (min-width: 800px) {

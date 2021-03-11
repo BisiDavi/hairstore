@@ -75,9 +75,17 @@ const HomeBanner = () => {
                         }
                         .welcometext {
                             width: 80%;
+                            margin: 50px auto -20px auto;
                         }
                         span.button {
                             margin: 80px auto 0px auto;
+                        }
+                        .overlay,
+                        .Homebanner {
+                            height: 350px;
+                        }
+                        .overlay {
+                            padding: 60px 0px;
                         }
                     }
                 `}
