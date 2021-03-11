@@ -96,9 +96,8 @@ const Nav = () => {
             <style jsx>
                 {`
                     .image {
-                        height: 5%;
-                        width: 30%;
-                        margin: auto;
+                        height: 150px;
+                        width: 150px;
                     }
                     nav.nav-menu {
                         display: flex;
@@ -107,6 +106,11 @@ const Nav = () => {
                         width: 100%;
                     }
                     @media (max-width: 768px) {
+                        .image {
+                            height: 5%;
+                            width: 30%;
+                            margin: auto;
+                        }
                         .cart {
                             position: absolute;
                             left: 20px;
