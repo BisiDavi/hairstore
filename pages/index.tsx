@@ -6,6 +6,7 @@ import {
     AlertBanner,
     HomeBanner,
     SelfiesBanner,
+    Footer,
 } from "../components";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
                 <HomeBanner />
                 <ServicesBanner />
                 <SelfiesBanner />
+                <Footer />
             </div>
         </Pagelayout>
     );

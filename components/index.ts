@@ -5,3 +5,5 @@ export { default as ServicesBanner } from "./Banner/ServicesBanner";
 export { default as SelfiesBanner } from "./Banner/SelfiesBanner";
 export { default as CartIcon } from "./Icons/CartIcon";
 export { default as Button } from "./Button/Button";
+export { default as MailForm } from "./Form/MailForm";
+export { default as Footer } from "./Footer/Footer";

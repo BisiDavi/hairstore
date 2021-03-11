@@ -8,9 +8,19 @@ const SelfiesBanner = () => {
             <div className="selfie-content">
                 <p>WE WANT TO SEE YOU!</p>
                 <h1>TAG US IN YOUR SELFIES</h1>
-                <Button text="@jenjenluxry" bgColor="white" />
+                <button>@jenjenluxry</button>
             </div>
-            <Image src="/selfiesBanner.webp" width="100%" height="100%" />
+
+            <style jsx>
+                {`
+                    .selfies {
+                        background-image: url("./selfiesBanner.webp");
+                        height: 300px;
+                        width: 100%;
+                        background-size: cover;
+                    }
+                `}
+            </style>
         </div>
     );
 };

@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
+import { ButtonProps } from "../../types";
 
-const Button = ({ text, linkTo, bgColor, width, height }) => {
+const Button = ({ text, linkTo, bgColor, width, height }: ButtonProps) => {
     return (
         <div>
             <Link href={linkTo} passHref>

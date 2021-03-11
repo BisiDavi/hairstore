@@ -15,7 +15,7 @@ const ServicesBanner = () => {
                     .our-services {
                         display: flex;
                         justify-content: center;
-                        margin: auto;
+                        margin: 50px auto;
                         width: 100%;
                     }
                     .serviceBanners {
