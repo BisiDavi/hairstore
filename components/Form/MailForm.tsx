@@ -5,15 +5,15 @@ const MailForm = () => {
     return (
         <div className="mailform">
             <div className="mail">
+                <p>
+                    Be the first to know about our sales, new arrivals & more!
+                </p>
                 <Image
                     className="mailText"
                     src="/mailListText.webp"
                     width="600px"
                     height="60px"
                 />
-                <p>
-                    Be the first to know about our sales, new arrivals & more!
-                </p>
             </div>
             <form>
                 <input placeholder="Enter your email here*" />
@@ -30,6 +30,7 @@ const MailForm = () => {
                         font-size: 1.3em;
                         text-align: center;
                         font-weight: 1000;
+                        margin: -10px 0px 25px 0px;
                     }
                     form {
                         margin: auto;
