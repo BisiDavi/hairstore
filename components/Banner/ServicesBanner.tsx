@@ -13,6 +13,7 @@ const ServicesBanner = () => {
                 width={400}
             />
         ));
+
     return (
         <div className="our-services">
             <div className="serviceBanners">{displayServices()}</div>
