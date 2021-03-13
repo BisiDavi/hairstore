@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 
 const Footer = () => {
@@ -16,20 +17,27 @@ const Footer = () => {
         { icon: "fab fa-youtube", link: "#link" },
     ];
 
+    const paymentMethods = [
+        { icon: "/mastercard.svg" },
+        { icon: "/paypal.svg" },
+    ];
+
     return (
         <div className="footer-section">
             <ul className="footerLinks row">
                 {footerLinks.map((link) => (
-                    <Link href={link.link} passHref>
-                        <li key={uuidv4()}>{link.name}</li>
-                    </Link>
+                    <li key={uuidv4()}>
+                        <Link href={link.link} passHref>
+                            <a>{link.name}</a>
+                        </Link>
+                    </li>
                 ))}
             </ul>
-            <div className="row">
+            <div className="row social">
                 <ul className="social-links">
                     {socialLinks.map((link) => (
-                        <Link href={link.link}>
-                            <i key={uuidv4()} className={link.icon}></i>
+                        <Link key={uuidv4()} href={link.link}>
+                            <i className={link.icon}></i>
                         </Link>
                     ))}
                 </ul>
@@ -37,6 +45,14 @@ const Footer = () => {
                     <i className="far fa-copyright"></i>
                     <p>2021, JenJensLuxuryhair.</p>
                 </div>
+
+                <ul className="payment-gateway">
+                    {paymentMethods.map((mthd) => (
+                        <li key={uuidv4()}>
+                            <Image src={mthd.icon} height={30} width={30} />
+                        </li>
+                    ))}
+                </ul>
             </div>
             <style jsx>
                 {`
@@ -49,8 +65,46 @@ const Footer = () => {
                         background-color: rgb(189, 90, 188);
                         color: white;
                         text-align: center;
-                        font-family: "raleway";
                         font-size: 1em;
+                    }
+                    ul.footerLinks.row li {
+                        margin: 0px 10px;
+                    }
+
+                    ul.footerLinks {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    ul.footerLinks.row li a {
+                        margin: 0px 10px;
+                        color: #5c5c5c;
+                        font-weight: 700;
+                    }
+                    .social {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 50px 0px 0px 0px;
+                        padding: 0px 150px;
+                    }
+                    .copyright {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .footer-section i {
+                        margin: 0px 10px;
+                        font-size: 20px;
+                    }
+                    .social-links {
+                        margin: 0px 10px;
+                        font-size: 20px;
+                    }
+                    .payment-gateway {
+                        display: flex;
+                    }
+                    .payment-gateway li {
+                        margin: 0px 10px;
                     }
                 `}
             </style>

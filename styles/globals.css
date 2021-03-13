@@ -20,7 +20,23 @@ a {
     margin: 0;
     padding: 0;
 }
+.pageslider ul li.slick-active button::before {
+    border: 2px solid #ffa6ca;
+    color: transparent;
+    border-radius: 50%;
+    height: 10px;
+    background-color: transparent;
+    width: 10px;
+}
+.pageslider ul li button::before {
+    background-color: #ffa6ca;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    color: #ffa6ca;
+    opacity: 1;
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+li {
+    list-style: none;
+}

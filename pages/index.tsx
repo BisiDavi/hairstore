@@ -6,11 +6,13 @@ import {
     ServicesBanner,
     AlertBanner,
     HomeBanner,
+    PromoBanner,
     SelfiesBanner,
     Footer,
 } from "../components";
 
 import Loader from "../components/loader";
+import HomepageSlider from "../components/Slider/HomepageSlider";
 
 const Home = () => {
     const [loader, setLoader] = useState(true);
@@ -26,8 +28,10 @@ const Home = () => {
                 <Loader />
             ) : (
                 <div className="homepage">
+                    <PromoBanner />
                     <AlertBanner />
                     <Nav />
+                    <HomepageSlider />
                     <HomeBanner />
                     <ServicesBanner />
                     <SelfiesBanner />

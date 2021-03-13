@@ -1,14 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "..";
 
-const SelfiesBanner = ({ imgsrc }) => {
+const SelfiesBanner = () => {
     return (
         <div className="selfies">
             <div className="selfie-content">
                 <div className="send-selfies">
                     <Image
-                        src={imgsrc}
+                        src="/selfies_temp.png"
                         height={300}
                         width={600}
                         layout="responsive"
@@ -26,10 +25,32 @@ const SelfiesBanner = ({ imgsrc }) => {
             <style jsx>
                 {`
                     .selfies {
-                        background-image: url("./selfiesBanner.webp");
-                        height: 300px;
+                        height: 100%;
                         width: 100%;
-                        background-size: cover;
+                    }
+                    h3 {
+                        font-family: Karla, sans-serif;
+                        font-weight: 700;
+                        font-style: normal;
+                        text-rendering: optimizeLegibility;
+                        letter-spacing: 0.05em;
+                        margin: 0 0 0.66667em;
+                        line-height: 1.4;
+                        color: #ffa6ca;
+                    }
+                    p {
+                        margin: 0 0 20px;
+                    }
+                    .instagram-follow {
+                        margin: auto 40px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .selfie-content {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        width: 100%;
+                        margin: 20px 0px;
                     }
                 `}
             </style>
