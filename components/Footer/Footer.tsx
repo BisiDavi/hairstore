@@ -81,6 +81,11 @@ const Footer = () => {
                         color: #5c5c5c;
                         font-weight: 700;
                     }
+                    .copyright i {
+                        font-weight: 100 !important;
+                        font-size: 12px !important;
+                        margin-top: 2px !important;
+                    }
                     .social {
                         display: flex;
                         justify-content: space-between;

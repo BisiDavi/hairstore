@@ -9,6 +9,9 @@ const PromoBanner = () => {
             <style jsx>{`
                 .promoBanner {
                     background-color: black;
+                    display: flex;
+                    justify-content: center;
+                    height: 30px;
                 }
                 h4 {
                     color: #ffa6ca;

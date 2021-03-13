@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { Pagelayout } from "../container";
-
 import {
     Nav,
-    ServicesBanner,
     AlertBanner,
-    HomeBanner,
     PromoBanner,
     SelfiesBanner,
     Footer,
 } from "../components";
-
 import Loader from "../components/loader";
 import HomepageSlider from "../components/Slider/HomepageSlider";
+import { Collections } from "../components/Product";
 
 const Home = () => {
     const [loader, setLoader] = useState(true);
+    const [promoDisplay, setPromoDisplay] = useState(true);
+
+    const promoHandler = () => setPromoDisplay(false);
     useEffect(() => {
         const startLoader = setTimeout(() => setLoader(false), 2000);
         return () => {
@@ -28,12 +28,15 @@ const Home = () => {
                 <Loader />
             ) : (
                 <div className="homepage">
+                    {promoDisplay && (
+                        <AlertBanner displayHandler={promoHandler} />
+                    )}
                     <PromoBanner />
-                    <AlertBanner />
                     <Nav />
                     <HomepageSlider />
-                    <HomeBanner />
-                    <ServicesBanner />
+                    <Collections />
+                    {/* <HomeBanner /> */}
+                    {/* <ServicesBanner /> */}
                     <SelfiesBanner />
                     <Footer />
                 </div>

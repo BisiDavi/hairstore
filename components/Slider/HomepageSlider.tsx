@@ -95,6 +95,9 @@ const HomepageSlider: FC = (): JSX.Element => {
                     height: 40px;
                     width: 40px;
                 }
+                .slider-control button:hover {
+                    color: white;
+                }
                 .btnGrp {
                     bottom: 10px;
                     z-index: 1000;
@@ -113,6 +116,7 @@ const HomepageSlider: FC = (): JSX.Element => {
                     color: #ffa5c8;
                     border: none;
                     font-size: 25px;
+                    cursor:pointer;
                 }
                 .slider-control button:focus {
                     outline: none;
