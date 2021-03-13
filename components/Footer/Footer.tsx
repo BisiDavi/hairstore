@@ -25,18 +25,26 @@ const Footer = () => {
                     </Link>
                 ))}
             </ul>
-            <div className="footer row">
+            <div className="row">
                 <ul className="social-links">
                     {socialLinks.map((link) => (
                         <Link href={link.link}>
-                            <li key={uuidv4()}>{link.icon}</li>
+                            <i key={uuidv4()} className={link.icon}></i>
                         </Link>
                     ))}
                 </ul>
-                <p>2021 JenJensLuxuryhair.</p>
+                <div className="copyright">
+                    <i className="far fa-copyright"></i>
+                    <p>2021, JenJensLuxuryhair.</p>
+                </div>
             </div>
             <style jsx>
                 {`
+                    .footer-section {
+                        background-color: #ffa6ca;
+                        color: #5c5c5c;
+                        padding: 40px 20px;
+                    }
                     .footer {
                         background-color: rgb(189, 90, 188);
                         color: white;
