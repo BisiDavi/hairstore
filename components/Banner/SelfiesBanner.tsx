@@ -2,13 +2,25 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "..";
 
-const SelfiesBanner = () => {
+const SelfiesBanner = ({ imgsrc }) => {
     return (
         <div className="selfies">
             <div className="selfie-content">
-                <p>WE WANT TO SEE YOU!</p>
-                <h1>TAG US IN YOUR SELFIES</h1>
-                <button>@jenjenluxry</button>
+                <div className="send-selfies">
+                    <Image
+                        src={imgsrc}
+                        height={300}
+                        width={600}
+                        layout="responsive"
+                    />
+                </div>
+                <div className="instagram-follow">
+                    <h3>Send Us Your Selfies!</h3>
+                    <p>
+                        Follow our Instagram and send us your gorgeous selfies
+                        or tag us!
+                    </p>
+                </div>
             </div>
 
             <style jsx>
