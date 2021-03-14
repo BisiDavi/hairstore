@@ -19,3 +19,13 @@ export interface HamburgerProps {
 export interface CollectionViewProps {
     collection: Record<"img" | "name" | "text", string>;
 }
+
+export interface IProduct {
+    name: string;
+    price: number;
+    img: string;
+}
+
+export interface ProductProps {
+    product: IProduct;
+}

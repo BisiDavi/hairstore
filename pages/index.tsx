@@ -6,12 +6,14 @@ import {
     PromoBanner,
     SelfiesBanner,
     Footer,
+    Loader,
+    HomepageSlider,
+    Collections,
+    Products,
+    Mailinglist,
+    MailButton,
+    Newsletter,
 } from "../components";
-import Loader from "../components/loader";
-import HomepageSlider from "../components/Slider/HomepageSlider";
-import { Collections } from "../components/Product";
-import { Mailinglist } from "../components/Form";
-import { MailButton } from "../components/MailList";
 
 const Home = () => {
     const [loader, setLoader] = useState(true);
@@ -39,11 +41,13 @@ const Home = () => {
                     <Nav />
                     <HomepageSlider />
                     <Collections />
+                    <Products />
                     <MailButton showMail={() => setMailModal(true)} />
                     <Mailinglist
                         show={mailModal}
                         onHide={() => setMailModal(false)}
                     />
+                    <Newsletter />
                     <SelfiesBanner />
                     <Footer />
                     <style jsx>
