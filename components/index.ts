@@ -14,4 +14,4 @@ export { default as Mailinglist } from "./MailList/MailList";
 export { default as MailButton } from "./MailList/MailButton";
 export { default as HomepageSlider } from "./Slider/HomepageSlider";
 export { default as Loader } from "./loader";
-export { default as Newsletter } from "./Newsletter'
+export { default as Newsletter } from "./Newsletter";
