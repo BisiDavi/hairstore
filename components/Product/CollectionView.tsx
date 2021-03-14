@@ -1,15 +1,24 @@
 import React from "react";
 import Image from "next/image";
+import styles from "./collection.module.css";
+import { CollectionViewProps } from "../../types";
 
-const CollectionView = ({ collection }) => {
+const CollectionView = ({ collection }: CollectionViewProps): JSX.Element => {
     return (
         <div className="collectionView">
-            <Image
-                src={collection.img}
-                alt={collection.name}
-                height={400}
-                width={400}
-            />
+            <span>
+                <Image
+                    src={collection.img}
+                    alt={collection.name}
+                    height={400}
+                    width={400}
+                    className={styles.collectionImg}
+                    layout="responsive"
+                />
+                <div className={styles.backside}>
+                    <h4>{collection.text}</h4>
+                </div>
+            </span>
             <div className="title">
                 <h4>{collection.name}</h4>
                 <i className="fas fa-long-arrow-alt-right"></i>
@@ -18,6 +27,7 @@ const CollectionView = ({ collection }) => {
                 .collectionView {
                     display: flex;
                     flex-direction: column;
+                    position: relative;
                 }
                 .title h4 {
                     margin-right: 15px;

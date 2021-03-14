@@ -1,8 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import Head from "next/head";
 import { PagecontainerProps } from "../types";
 
-const Pagelayout = ({ title, children }: PagecontainerProps): JSX.Element => {
+const Pagelayout: FC<PagecontainerProps> = ({
+    title,
+    children,
+}): JSX.Element => {
     return (
         <div>
             <Head>

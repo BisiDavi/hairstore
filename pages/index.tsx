@@ -10,10 +10,13 @@ import {
 import Loader from "../components/loader";
 import HomepageSlider from "../components/Slider/HomepageSlider";
 import { Collections } from "../components/Product";
+import { Mailinglist } from "../components/Form";
+import { MailButton } from "../components/MailList";
 
 const Home = () => {
     const [loader, setLoader] = useState(true);
     const [promoDisplay, setPromoDisplay] = useState(true);
+    const [mailModal, setMailModal] = useState(false);
 
     const promoHandler = () => setPromoDisplay(false);
     useEffect(() => {
@@ -22,6 +25,7 @@ const Home = () => {
             clearTimeout(startLoader);
         };
     }, []);
+
     return (
         <Pagelayout title="Welcome">
             {loader ? (
@@ -35,10 +39,20 @@ const Home = () => {
                     <Nav />
                     <HomepageSlider />
                     <Collections />
-                    {/* <HomeBanner /> */}
-                    {/* <ServicesBanner /> */}
+                    <MailButton showMail={() => setMailModal(true)} />
+                    <Mailinglist
+                        show={mailModal}
+                        onHide={() => setMailModal(false)}
+                    />
                     <SelfiesBanner />
                     <Footer />
+                    <style jsx>
+                        {`
+                            .homepage {
+                                position: relative;
+                            }
+                        `}
+                    </style>
                 </div>
             )}
         </Pagelayout>

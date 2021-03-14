@@ -15,3 +15,7 @@ export interface HamburgerProps {
     className: string;
     btnClick: () => void;
 }
+
+export interface CollectionViewProps {
+    collection: Record<"img" | "name" | "text", string>;
+}

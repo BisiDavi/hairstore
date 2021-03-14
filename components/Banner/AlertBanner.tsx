@@ -26,6 +26,7 @@ const AlertBanner = ({ displayHandler }) => {
                         background-color: #ca3862;
                         text-align: center;
                         width: 100%;
+                        margin-bottom: 0;
                         font-family: "raleway";
                     }
                     button {

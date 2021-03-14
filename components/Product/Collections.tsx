@@ -3,10 +3,26 @@ import CollectionView from "./CollectionView";
 
 const Collections = () => {
     const collections = [
-        { img: "/customwig_temp.webp", name: "Customize Your Own Unit!" },
-        { img: "/stylewig_temp.webp", name: "Signature Style Wigs" },
-        { img: "/bundle_temp.png", name: "Provide your own wig bundle" },
-        { img: "/shipCollection_temp.webp", name: "Ready to Ship wigs" },
+        {
+            img: "/customwig_temp.webp",
+            name: "Customize Your Own Unit!",
+            text: "Buy your custom wig, at an affordable rate",
+        },
+        {
+            img: "/stylewig_temp.webp",
+            name: "Signature Style Wigs",
+            text: "Get awesome signature wigs.",
+        },
+        {
+            img: "/bundle_temp.png",
+            name: "Provide your own wig bundle",
+            text: "Do you want a wig bundle?",
+        },
+        {
+            img: "/shipCollection_temp.webp",
+            name: "Ready to Ship wigs",
+            text: "Oh yes, All wigs are available for shipping.",
+        },
     ];
     return (
         <div className="collections">

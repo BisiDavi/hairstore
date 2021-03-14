@@ -1,1 +1,1 @@
-export { default as SubscriberModal } from "./SubscriberModal";
+export { default as PageModal } from "./PageModal";

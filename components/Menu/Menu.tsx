@@ -59,6 +59,7 @@ const Nav = () => {
                         display: flex;
                         width: 70%;
                         align-items: center;
+                        margin-bottom: 0;
                         justify-content: space-around;
                     }
                     @media (max-width: 768px) {
@@ -78,8 +79,8 @@ const Nav = () => {
             <span className="image">
                 <Image
                     src="/logo.jpg"
-                    height={150}
-                    width={150}
+                    height={100}
+                    width={100}
                     layout="responsive"
                 />
             </span>
