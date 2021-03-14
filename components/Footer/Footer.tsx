@@ -86,6 +86,9 @@ const Footer = () => {
                         font-size: 12px !important;
                         margin-top: 2px !important;
                     }
+                    p {
+                        margin-bottom: 0px;
+                    }
                     .social {
                         display: flex;
                         justify-content: space-between;
