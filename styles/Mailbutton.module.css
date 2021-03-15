@@ -23,10 +23,16 @@
     z-index: 10000000;
 }
 
-.mailButton button:focus {
+.mailButton .button:focus {
     background-color: black;
     box-shadow: none;
     font-weight: bold;
+}
+
+.mailButton .button:hover,
+.mailButton .button:active {
+    background-color: black !important;
+    opacity: 0.6;
 }
 
 .btnStyle {

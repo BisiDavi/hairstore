@@ -34,7 +34,7 @@ const AlertBanner = ({ displayHandler }) => {
                         border: none;
                         position: absolute;
                         right: 20px;
-                        top: 35%;
+                        top: 15%;
                         background: none;
                         color: white;
                         font-size: 20px;

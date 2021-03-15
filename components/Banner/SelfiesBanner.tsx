@@ -50,7 +50,7 @@ const SelfiesBanner = () => {
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         width: 100%;
-                        margin: 20px 0px;
+                        margin: 40px 0px;
                     }
                 `}
             </style>

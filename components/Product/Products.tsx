@@ -22,7 +22,7 @@ const Products: FC = (): JSX.Element => {
             <style jsx>{`
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                grid-gap: 20px;
+                grid-gap: 35px;
                 padding: 0px 30px;
             `}</style>
         </div>
