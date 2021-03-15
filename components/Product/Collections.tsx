@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import CollectionView from "./CollectionView";
 
 const Collections = () => {
@@ -27,7 +28,7 @@ const Collections = () => {
     return (
         <div className="collections">
             {collections.map((collection) => (
-                <CollectionView collection={collection} />
+                <CollectionView key={uuidv4()} collection={collection} />
             ))}
 
             <style jsx>

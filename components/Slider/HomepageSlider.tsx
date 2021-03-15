@@ -21,7 +21,6 @@ const HomepageSlider: FC = (): JSX.Element => {
         sliderRef.current.slickPlay();
         setSliderState(false);
     };
-    console.log("slider", sliderRef);
 
     const pause = () => {
         sliderRef.current.slickPause();

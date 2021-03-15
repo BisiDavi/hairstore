@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { IProduct } from "../../types";
 import Product from "./Product";
 
@@ -16,7 +17,7 @@ const Products: FC = (): JSX.Element => {
     return (
         <div className="products">
             {ProductsArray.map((product) => (
-                <Product product={product} />
+                <Product key={uuidv4()} product={product} />
             ))}
             <style jsx>{`
                 display: grid;
